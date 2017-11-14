@@ -1,13 +1,33 @@
 import 'babel-polyfill'
 import Vue from 'vue'
+import Vuetify from 'vuetify'
 import App from './App.vue'
 import Cordova from './Cordova.js'
 
 import store from './store'
 import router from './router'
 import { sync } from 'vuex-router-sync'
+import ToastComponent from './components/alerts.vue'
 
+Vue.use(Vuetify)
 sync(store, router)
+
+const Toast = Vue.extend(ToastComponent)
+
+Vue.mixin({
+  methods: {
+    $toast ({text}) {
+      const toast = new Toast({
+        store: this.$store,
+        router: this.$router,
+        propsData: {
+          text
+        }
+      }).$mount()
+      this.$root.$el.appendChild(toast.$el)
+    }
+  }
+})
 
 // Load Vue instance
 export default new Vue({

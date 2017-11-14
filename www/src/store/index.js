@@ -4,7 +4,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  msg: 'hello from Vuex'
+  title: '熊猫记账',
+  user: false
 }
 
 const modules = { }
