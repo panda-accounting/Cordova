@@ -58,10 +58,12 @@ export default {
     goto (action) {
       this.isActive = false
       switch (action) {
-        case "account":
+        case 'account':
           this.$router.push('/account/new')
-        case "record":
+          break
+        case 'record':
           this.$router.push('/record/new')
+          break
       }
     }
   }

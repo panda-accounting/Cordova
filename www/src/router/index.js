@@ -10,6 +10,8 @@ import login from '../views/login.vue'
 import password from '../views/password.vue'
 import dashboard from '../views/dashboard.vue'
 
+import fallback from '../views/fallback.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -20,6 +22,8 @@ export default new Router({
     { name: 'about', path: '/about', component: about },
     { name: 'login', path: '/login', component: login },
     { name: 'password', path: '/password', component: password },
-    { name: 'dashboard', path: '/dashboard', component: dashboard }
+    { name: 'dashboard', path: '/dashboard', component: dashboard },
+    { name: 'settings', path: '/settings', component: fallback }
+
   ]
 })
