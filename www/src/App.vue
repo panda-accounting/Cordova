@@ -18,20 +18,12 @@
 
 
       <v-list dense>
-        <v-list-tile @click="">
+        <v-list-tile @click="$router.push(action.path)"  v-for="action in actions" :key="action.path">
           <v-list-tile-action>
-            <v-icon>home</v-icon>
+            <v-icon>{{action.icon}}</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Home</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile @click="">
-          <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>Contact</v-list-tile-title>
+            <v-list-tile-title>{{action.name}}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -54,7 +46,12 @@
   export default {
     name: 'Root',
     data: () => ({
-      drawer: false
+      drawer: false,
+      actions: [
+        {icon: 'home', name: '仪表盘', path: '/dashboard'},
+        {icon: 'folder_shared', name: '账户管理', path: '/accounts'},
+        {icon: 'build', name: '设置', path: '/settings'}
+      ]
     }),
     computed: {
       user () {
