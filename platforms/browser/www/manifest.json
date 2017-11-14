@@ -1,0 +1,17 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Cordovue",
+  "short_name": "Cordovue",
+  "version": "com.laesporadelhongo.cordovue",
+  "description": "A sample Apache Cordova application using VueJS.",
+  "author": "Pandada8",
+  "icons": [
+    {
+      "src": "www/dist/img/logo.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
+  "start_url": "index.html"
+}

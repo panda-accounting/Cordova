@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.laesporadelhongo.cordovue" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Cordovue</name>
+    <description>
+        A sample Apache Cordova application using VueJS.
+    </description>
+    <author email="pandada8@gmail.com" href="http://bookkeeper.pandada8.me">
+        Pandada8
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon src="www/dist/img/logo.png" />
+</widget>

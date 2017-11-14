@@ -1,0 +1,22 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.laesporadelhongo.cordovue"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.laesporadelhongo.cordovue"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.laesporadelhongo.cordovue"
+    }
+  }
+}
