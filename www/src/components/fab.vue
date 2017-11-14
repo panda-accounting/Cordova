@@ -5,7 +5,7 @@
         <div class="action" v-for="action in actions" :key="action.action" :class="action.size">
           <v-fab-transition >
             <v-btn
-              @click="toggle(action.action)"
+              @click="goto(action.action)"
               :color="action.color"
               dark
               absolute
@@ -54,6 +54,15 @@ export default {
   methods: {
     toggle () {
       this.isActive = !this.isActive
+    },
+    goto (action) {
+      this.isActive = false
+      switch (action) {
+        case "account":
+          this.$router.push('/account/new')
+        case "record":
+          this.$router.push('/record/new')
+      }
     }
   }
 }
