@@ -59,7 +59,7 @@ export default {
       this.isActive = false
       switch (action) {
         case 'account':
-          this.$router.push('/account/new')
+          this.$router.push('/accounts/new')
           break
         case 'record':
           this.$router.push('/record/new')

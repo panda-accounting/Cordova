@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { wait } from '../utils/'
+import { wait, sleep } from '../utils/'
 export default {
   data () {
     return {
@@ -42,12 +42,19 @@ export default {
     this.loadingText = '砍一点竹子'
     await wait(this.$store.dispatch('vault/find'))
     this.loadingText = '造一个窝'
-    await wait(this.$store.dispatch('unlock'))
+    const unlocked = await wait(this.$store.dispatch('unlock'))
+    this.loadingText = '就快完成了！'
+    await sleep(1000)
     this.loading = false
+    if (unlocked) {
+      this.$router.push('/dashboard')
+    }
   },
   methods: {
-    submit () {
-      this.$store.dispatch('setMaster', this.master)
+    async submit () {
+      await this.$store.dispatch('setMaster', this.master)
+      await this.$store.dispatch('unlock')
+      this.$router.push('/dashboard')
     }
   }
 }

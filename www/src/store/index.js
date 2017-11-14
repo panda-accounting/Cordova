@@ -41,24 +41,26 @@ const actions = {
     state._booting = new Promise(async (resolve, reject) => {
       const token = window.localStorage.getItem('feathers-jwt')
       if (token) {
-        console.log(token)
         await dispatch('auth/authenticate', {strategy: 'jwt', token: token})
         const userId = get(state, 'auth.payload.userId')
-        console.log(userId)
         if (userId) {
           await dispatch('users/get', userId)
           if (router.app.$route.path === '/' || router.app.$route.matched.length === 0) {
             router.push('/dashboard')
           }
-          return
+          return resolve()
         }
       }
       router.push('/login')
+      resolve()
     })
   },
   setMaster ({ state }, password) {
     state.master = password
     localStorage.setItem('master', password)
+  },
+  unlock ({ state }) {
+
   }
 }
 

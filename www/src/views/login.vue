@@ -58,10 +58,10 @@ export default {
         await this.$store.dispatch('auth/authenticate', {strategy: 'local', email: this.username, password: this.password})
         this.$router.push('/password')
       } catch (e) {
-        if (e.code == 401) {
+        if (e.code === 401) {
           return this.$toast({text: '错误的密码与用户名组合'})
         }
-        this.$toast({text: e.message || e })
+        this.$toast({ text: e.message || e })
       }
     },
     async register () {
@@ -71,7 +71,7 @@ export default {
         await this.$store.dispatch('auth/authenticate', {strategy: 'local', email: this.username, password: this.password})
         this.$router.push('/password')
       } catch (e) {
-        if (e.code == 500 && e.data && e.data.code == 11000) {
+        if (e.code === 500 && e.data && e.data.code === 11000) {
           return this.$toast({'text': '用户名已存在'})
         }
         this.$toast({text: e.message || e})

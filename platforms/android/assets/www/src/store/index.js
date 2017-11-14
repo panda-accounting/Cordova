@@ -7,6 +7,9 @@ import router from '../router'
 import axios from 'axios'
 import { get } from 'lodash'
 
+import accounts from './accounts'
+import records from './records'
+
 const remote = process.env.NODE_ENV !== 'production' ? 'http://localhost:3030' : 'http://api.accouting.pandada8.me'
 
 window.feathers = feathers
@@ -18,12 +21,19 @@ const { service, auth } = feathersVuex(app, {idField: '_id'})
 Vue.use(Vuex)
 
 const state = {
-  title: '熊猫记账',
-  user: false
+  title: '熊猫记账'
 }
 
-const modules = { }
-const mutations = { }
+const modules = {
+  records,
+  accounts
+}
+
+const mutations = {
+  changeTitle (state, newTitle) {
+    state.title = newTitle
+  }
+}
 const getters = { }
 const actions = {
   boot ({state, dispatch}) {
@@ -31,22 +41,26 @@ const actions = {
     state._booting = new Promise(async (resolve, reject) => {
       const token = window.localStorage.getItem('feathers-jwt')
       if (token) {
-        console.log(token)
         await dispatch('auth/authenticate', {strategy: 'jwt', token: token})
         const userId = get(state, 'auth.payload.userId')
-        console.log(userId)
         if (userId) {
           await dispatch('users/get', userId)
-          router.push('/dashboard')
-          return
+          if (router.app.$route.path === '/' || router.app.$route.matched.length === 0) {
+            router.push('/dashboard')
+          }
+          return resolve()
         }
       }
       router.push('/login')
+      resolve()
     })
   },
   setMaster ({ state }, password) {
     state.master = password
     localStorage.setItem('master', password)
+  },
+  unlock ({ state }) {
+
   }
 }
 
