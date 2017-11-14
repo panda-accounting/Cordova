@@ -38,6 +38,7 @@ export default {
     }
   },
   async mounted () {
+    await this.$store.dispatch('boot')
     this.loadingText = '砍一点竹子'
     await wait(this.$store.dispatch('vault/find'))
     this.loadingText = '造一个窝'
@@ -46,8 +47,7 @@ export default {
   },
   methods: {
     submit () {
-      console.log(this.master)
-      this.$store.dispatch('setMaster')
+      this.$store.dispatch('setMaster', this.master)
     }
   }
 }

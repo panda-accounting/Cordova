@@ -43,6 +43,10 @@ const actions = {
       }
       router.push('/login')
     })
+  },
+  setMaster ({ state }, password) {
+    state.master = password
+    localStorage.setItem('master', password)
   }
 }
 
