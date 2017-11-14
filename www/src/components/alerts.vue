@@ -1,24 +1,18 @@
 <template>
   <v-snackbar
-    :timeout="timeout"
+    :timeout="option.timeout || 5000"
     :bottom="true"
     v-model="snackbar"
   >
-    {{text}}
-    <v-btn dark flat @click.native="close"> 关闭 </v-btn>
+    {{option.text}}
+    <v-btn v-if="option.closeable" dark flat @click.native="close"> 关闭 </v-btn>
   </v-snackbar>
 </template>
 
 <script>
 
 export default {
-  props: {
-    text: String,
-    timeout: {
-      type: Number,
-      default: 3000
-    }
-  },
+  props: ['option'],
   data () {
     return {
       snackbar: true

@@ -7,6 +7,7 @@
         :rules="[(v) => v.length <= 25 || '最长 25 个字符']"
         :counter="25"
         v-model="username"
+        :required="true"
       ></v-text-field>
     </v-flex>
     <v-flex xs12>
@@ -14,6 +15,7 @@
         label="密码"
         :rules="[(v) => v.length <= 50 || '最长 50 个字符']"
         :counter="50"
+        :required="true"
         v-model="password"
         :append-icon="showPassword ? 'visibility_off' : 'visibility'"
         :append-icon-cb="() => (showPassword = !showPassword)"
@@ -45,11 +47,20 @@ export default {
     }
   },
   methods: {
-    login () {
-      console.log('try login')
-      this.$toast({text: '密码错误'})
+    async login () {
+      try {
+        await this.$store.dispatch('auth/authenticate', {strategy: 'local', email: this.username, password: this.password})
+        this.$router.push('/password')
+      } catch (e) {
+        this.$toast({text: e.msg || e})
+      }
     },
-    register () {},
+    async register () {
+      await this.$store.dispatch('users/create', {email: this.username, password: this.password})
+      this.$toast({'text': '创建成功'})
+      await this.$store.dispatch('auth/authenticate', {strategy: 'local', email: this.username, password: this.password})
+      this.$router.push('/password')
+    },
     skip () {
       this.$store.dispatch('skipRegister')
       this.$router.push('/password')

@@ -385,6 +385,13 @@ aws4@^1.2.1, aws4@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e"
 
+axios@^0.17.1:
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.17.1.tgz#2d8e3e5d0bdbd7327f91bc814f5c57660f81824d"
+  dependencies:
+    follow-redirects "^1.2.5"
+    is-buffer "^1.1.5"
+
 babel-code-frame@7.0.0-beta.0:
   version "7.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/babel-code-frame/-/babel-code-frame-7.0.0-beta.0.tgz#418a7b5f3f7dc9a4670e61b1158b4c5661bec98d"
@@ -1302,6 +1309,513 @@ camelcase@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
+can-ajax@^1.0.0, can-ajax@^1.0.6:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/can-ajax/-/can-ajax-1.1.2.tgz#47b996ce00e835380da2f678ef74f9c4f3a6f0cb"
+  dependencies:
+    can-globals "^0.2.3"
+    can-namespace "^1.0.0"
+    can-param "^1.0.1"
+    can-parse-uri "^1.0.0"
+    can-reflect "^1.4.5"
+
+can-assign@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/can-assign/-/can-assign-1.0.1.tgz#4d2c880089d546a08e761e176b58e8639bd082f5"
+
+can-attribute-encoder@^0.3.0, can-attribute-encoder@^0.3.1:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/can-attribute-encoder/-/can-attribute-encoder-0.3.2.tgz#df6f3fb3e8abaff3becb90078e4760f02b59dcc6"
+  dependencies:
+    can-log "^0.1.0"
+    can-namespace "^1.0.0"
+
+can-cid@^1.0.0, can-cid@^1.0.3, can-cid@^1.1.0, can-cid@^1.1.1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/can-cid/-/can-cid-1.1.2.tgz#b15f858e42213b2b54f3971cb0d83643e6be7367"
+  dependencies:
+    can-namespace "1.0.0"
+
+can-compute@^3.3.0, can-compute@^3.3.1, can-compute@^3.3.7:
+  version "3.3.9"
+  resolved "https://registry.yarnpkg.com/can-compute/-/can-compute-3.3.9.tgz#4c70a2669ef0c5a44a2894b5853b05a64b40db59"
+  dependencies:
+    can-cid "^1.1.1"
+    can-event "^3.7.0"
+    can-namespace "1.0.0"
+    can-observation "^3.3.1"
+    can-reflect "^1.2.1"
+    can-stache-key "0.1.0"
+    can-symbol "^1.0.0"
+    can-types "^1.1.0"
+    can-util "^3.9.0"
+
+can-connect@^1.5.4:
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/can-connect/-/can-connect-1.5.10.tgz#cd19d7a83cacf36d03d357087c240f4ac2ff2437"
+  dependencies:
+    can-ajax "^1.0.6"
+    can-compute "^3.3.1"
+    can-construct "^3.2.0"
+    can-define "^1.2.0"
+    can-event "^3.6.0"
+    can-list "^3.1.0"
+    can-make-rest "0.1.1"
+    can-map "^3.3.1"
+    can-namespace "1.0.0"
+    can-observation "^3.3.1"
+    can-reflect "^1.2.1"
+    can-set "^1.3.0"
+    can-stache "^3.3.0"
+    can-stache-bindings "^3.2.0"
+    can-types "^1.1.0"
+    can-util "^3.9.5"
+    can-validate-interface "0.1.0"
+    can-view-callbacks "^3.1.0"
+    can-view-nodelist "^3.1.0"
+    steal-stache "^3.1.0"
+
+can-construct@^3.2.0:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/can-construct/-/can-construct-3.2.3.tgz#2d6100fbbd71bbf78531693f230b3887189933fe"
+  dependencies:
+    can-namespace "1.0.0"
+    can-util "^3.9.0"
+
+can-define-lazy-value@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/can-define-lazy-value/-/can-define-lazy-value-1.0.1.tgz#6718e9b25d8b7a9012d21bffe9a030bd73502bdc"
+
+can-define@^1.2.0:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/can-define/-/can-define-1.5.4.tgz#eb1620bac78027809e1639cca8e26afc5a76d7aa"
+  dependencies:
+    can-cid "^1.0.0"
+    can-compute "^3.3.1"
+    can-construct "^3.2.0"
+    can-define-lazy-value "^1.0.0"
+    can-event "^3.5.0"
+    can-log "^0.1.0"
+    can-namespace "^1.0.0"
+    can-observation "^3.3.4"
+    can-reflect "^1.2.1"
+    can-simple-observable "^1.0.0"
+    can-symbol "^1.0.0"
+    can-test-helpers "^1.1.0"
+    can-types "^1.1.0"
+    can-util "^3.9.0"
+
+can-deparam@^1.0.0, can-deparam@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/can-deparam/-/can-deparam-1.0.3.tgz#64b2fef472ec2e0c72097d60b8c4c0cc5e89e24f"
+  dependencies:
+    can-namespace "1.0.0"
+
+can-dom-data-state@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/can-dom-data-state/-/can-dom-data-state-0.2.0.tgz#2db15f2369abd204ccea3a94b546b26ab2b859b6"
+  dependencies:
+    can-cid "^1.1.0"
+    can-namespace "^1.0.0"
+
+can-dom-events@^1.0.2:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/can-dom-events/-/can-dom-events-1.0.6.tgz#11cc6241ec52a72fbd45b361c7c95acd61bba973"
+  dependencies:
+    can-globals "^0.2.2"
+    can-namespace "^1.0.0"
+
+can-event-dom-enter@^1.0.2, can-event-dom-enter@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/can-event-dom-enter/-/can-event-dom-enter-1.0.4.tgz#bbf96f597b9e5681168246fd124ef8d62177dea3"
+  dependencies:
+    can-cid "^1.1.0"
+    can-dom-data-state "^0.2.0"
+    can-dom-events "^1.0.2"
+
+can-event-dom-radiochange@^1.0.2, can-event-dom-radiochange@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/can-event-dom-radiochange/-/can-event-dom-radiochange-1.0.4.tgz#c7c044da221ec4c361a43f94254415866325875f"
+  dependencies:
+    can-cid "^1.1.0"
+    can-dom-data-state "^0.2.0"
+    can-dom-events "^1.0.2"
+    can-globals "^0.2.2"
+
+can-event@^3.5.0, can-event@^3.5.0-pre.2, can-event@^3.6.0, can-event@^3.7.0, can-event@^3.7.4:
+  version "3.7.6"
+  resolved "https://registry.yarnpkg.com/can-event/-/can-event-3.7.6.tgz#1dc9342fe59e5cce42e8a5808a24776c3a4fc9a5"
+  dependencies:
+    can-cid "^1.0.0"
+    can-namespace "1.0.0"
+    can-types "^1.1.0"
+    can-util "^3.9.0"
+
+can-fixture-socket@^0.7.1:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/can-fixture-socket/-/can-fixture-socket-0.7.2.tgz#ff59e8732733d2ffeb5bba50304d3275068eb07d"
+  dependencies:
+    can-fixture "^1.1.0"
+    can-util "^3.9.5"
+
+can-fixture@^1.1.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/can-fixture/-/can-fixture-1.2.0.tgz#c12f70c0442bb53156966524694a866a19c20e81"
+  dependencies:
+    can-connect "^1.5.4"
+    can-deparam "^1.0.1"
+    can-namespace "1.0.0"
+    can-set "^1.3.0"
+    can-util "^3.9.0"
+
+can-globals@^0.2.0, can-globals@^0.2.2, can-globals@^0.2.3:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/can-globals/-/can-globals-0.2.6.tgz#aa66c51d4e35cbee2ca579264aac9ee56813378c"
+  dependencies:
+    can-namespace "^1.0.0"
+    can-reflect "^1.2.6"
+    can-symbol "^1.0.0"
+
+can-list@^3.1.0:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/can-list/-/can-list-3.2.2.tgz#11a249bddc64d1435c96433747d0839c3a5927ef"
+  dependencies:
+    can-cid "^1.0.0"
+    can-compute "^3.3.1"
+    can-construct "^3.2.0"
+    can-event "^3.6.0"
+    can-map "^3.3.1"
+    can-namespace "1.0.0"
+    can-observation "^3.3.1"
+    can-reflect "^1.2.1"
+    can-symbol "^1.0.0"
+    can-types "^1.1.0"
+    can-util "^3.9.0"
+
+can-log@^0.1.0:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/can-log/-/can-log-0.1.2.tgz#dd56d5ad39a2ed833778f3ea27ab7da5ba7cf94a"
+
+can-make-rest@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/can-make-rest/-/can-make-rest-0.1.1.tgz#f25ee4f99ffccc2775836b5602862636e69a4ef8"
+  dependencies:
+    can-util "^3.9.0-pre.4"
+
+can-map@^3.3.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/can-map/-/can-map-3.4.1.tgz#4692e643a2e4355c9f0bb880e4bd1abdeabfb1d2"
+  dependencies:
+    can-cid "^1.0.0"
+    can-compute "^3.3.0"
+    can-construct "^3.2.0"
+    can-event "^3.5.0"
+    can-namespace "^1.0.0"
+    can-observation "^3.3.0"
+    can-reflect "^1.2.0"
+    can-stache-key "0.1.0"
+    can-symbol "^1.0.0"
+    can-types "^1.1.0"
+    can-util "^3.9.4"
+
+can-namespace@1.0.0, can-namespace@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/can-namespace/-/can-namespace-1.0.0.tgz#0b8fafafbb11352b9ead4222ffe3822405b43e99"
+
+can-observation@^3.3.0, can-observation@^3.3.0-pre.1, can-observation@^3.3.1, can-observation@^3.3.4, can-observation@^3.3.5:
+  version "3.3.6"
+  resolved "https://registry.yarnpkg.com/can-observation/-/can-observation-3.3.6.tgz#1dc7638c09d5822f8702019eeeb7858c6bdb2c4a"
+  dependencies:
+    can-cid "^1.0.0"
+    can-event "^3.6.0"
+    can-namespace "1.0.0"
+    can-reflect "^1.0.0"
+    can-symbol "^1.0.0"
+    can-util "^3.9.0"
+
+can-param@^1.0.0, can-param@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/can-param/-/can-param-1.0.2.tgz#16db16a8c337f04d49e3ad00cf36e6f3841a666d"
+  dependencies:
+    can-namespace "1.0.0"
+
+can-parse-uri@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/can-parse-uri/-/can-parse-uri-1.0.1.tgz#220aa143d5adff4afea2ebe6975b169b2638e5a7"
+
+can-reflect-promise@^1.1.0, can-reflect-promise@^1.1.0-pre.0:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/can-reflect-promise/-/can-reflect-promise-1.1.5.tgz#34918311c6cefc9543f3b006338424e7253fdb83"
+  dependencies:
+    can-cid "^1.0.3"
+    can-event "^3.5.0"
+    can-observation "^3.3.0"
+    can-reflect "^1.1.0"
+    can-symbol "^1.0.0"
+    can-util "^3.9.0"
+
+can-reflect@^1.0.0, can-reflect@^1.1.0, can-reflect@^1.1.0-pre.1, can-reflect@^1.2.0, can-reflect@^1.2.1, can-reflect@^1.2.6, can-reflect@^1.4.1, can-reflect@^1.4.5:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/can-reflect/-/can-reflect-1.8.0.tgz#1ba058d935101424e28706b285c2a44c11ddf3a9"
+  dependencies:
+    can-namespace "^1.0.0"
+    can-symbol "^1.3.0"
+
+can-route@^3.2.0:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/can-route/-/can-route-3.2.4.tgz#f57dc7ecd412ae1427278aa14895712b0dda488c"
+  dependencies:
+    can-compute "^3.3.1"
+    can-deparam "^1.0.1"
+    can-event "^3.6.0"
+    can-namespace "1.0.0"
+    can-observation "^3.3.1"
+    can-param "^1.0.1"
+    can-reflect "^1.2.1"
+    can-simple-map "^3.3.0"
+    can-symbol "^1.0.0"
+    can-types "^1.1.0"
+    can-util "^3.9.0"
+
+can-set@^1.3.0:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/can-set/-/can-set-1.3.3.tgz#43fe25c13d1901d30e0871042b54729a617645cc"
+  dependencies:
+    can-namespace "^1.0.0"
+    can-util "^3.9.0"
+
+can-simple-map@^3.3.0:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/can-simple-map/-/can-simple-map-3.3.2.tgz#a4d2ff261007a56e80307ceeddb8d8ca73ab2392"
+  dependencies:
+    can-cid "^1.0.3"
+    can-construct "^3.2.0"
+    can-event "^3.6.0"
+    can-observation "^3.3.1"
+    can-reflect "^1.2.1"
+    can-symbol "^1.0.0"
+    can-types "^1.1.0"
+    can-util "^3.9.0"
+
+can-simple-observable@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/can-simple-observable/-/can-simple-observable-1.0.2.tgz#5c2b3a78ff7bade82b52e068c1dd6526017ddf28"
+  dependencies:
+    can-cid "^1.0.3"
+    can-event "^3.7.4"
+    can-namespace "1.0.0"
+    can-observation "^3.3.5"
+    can-reflect "^1.4.1"
+
+can-stache-bindings@^3.2.0:
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/can-stache-bindings/-/can-stache-bindings-3.11.1.tgz#b6925d4cf8215a6e1340a91f9ba74b35cb22189f"
+  dependencies:
+    can-attribute-encoder "^0.3.0"
+    can-compute "^3.3.1"
+    can-event "^3.5.0"
+    can-event-dom-enter "^1.0.2"
+    can-event-dom-radiochange "^1.0.2"
+    can-globals "^0.2.2"
+    can-log "^0.1.0"
+    can-observation "^3.3.1"
+    can-reflect "^1.2.1"
+    can-simple-map "^3.3.0"
+    can-simple-observable "^1.0.0"
+    can-stache "^3.7.1"
+    can-stache-key "0.1.0"
+    can-symbol "^1.0.0"
+    can-types "^1.1.0"
+    can-util "^3.9.0"
+    can-view-callbacks "^3.2.0"
+    can-view-live "^3.2.0"
+    can-view-model "^3.4.0"
+    can-view-scope "^3.5.4"
+
+can-stache-key@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/can-stache-key/-/can-stache-key-0.1.0.tgz#0a8b0047ad227f4c808a202cfa68a77220edfa72"
+  dependencies:
+    can-cid "^1.0.0"
+    can-event "^3.5.0-pre.2"
+    can-namespace "1.0.0"
+    can-observation "^3.3.0-pre.1"
+    can-reflect "^1.1.0-pre.1"
+    can-reflect-promise "^1.1.0-pre.0"
+    can-symbol "^1.0.0-pre.0"
+    can-util "^3.9.0-pre.4"
+
+can-stache-key@^0.1.0:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/can-stache-key/-/can-stache-key-0.1.1.tgz#f034d66110ca15f9110f6587af10d80b48f7e20b"
+  dependencies:
+    can-cid "^1.0.0"
+    can-event "^3.5.0"
+    can-namespace "1.0.0"
+    can-observation "^3.3.0"
+    can-reflect "^1.1.0"
+    can-reflect-promise "^1.1.0"
+    can-symbol "^1.0.0"
+    can-util "^3.9.0"
+
+can-stache@^3.10.0, can-stache@^3.3.0, can-stache@^3.7.1, can-stache@^3.7.3:
+  version "3.13.4"
+  resolved "https://registry.yarnpkg.com/can-stache/-/can-stache-3.13.4.tgz#19380426e8559eb7a8aa8dde65c332ec833702b1"
+  dependencies:
+    can-attribute-encoder "^0.3.0"
+    can-compute "^3.3.1"
+    can-globals "^0.2.0"
+    can-log "^0.1.0"
+    can-namespace "1.0.0"
+    can-observation "^3.3.1"
+    can-reflect "^1.2.1"
+    can-route "^3.2.0"
+    can-stache-key "0.1.0"
+    can-symbol "^1.0.0"
+    can-util "^3.10.6"
+    can-view-callbacks "^3.2.0"
+    can-view-live "^3.2.0"
+    can-view-nodelist "^3.1.0"
+    can-view-parser "^3.6.0"
+    can-view-scope "^3.5.4"
+    can-view-target "^3.1.0"
+
+can-symbol@^1.0.0, can-symbol@^1.0.0-pre.0, can-symbol@^1.3.0:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/can-symbol/-/can-symbol-1.4.2.tgz#336b73a92e0a6f0615ea006adbaf0564411584f2"
+  dependencies:
+    can-namespace "^1.0.0"
+
+can-test-helpers@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/can-test-helpers/-/can-test-helpers-1.1.0.tgz#0913dfc01530fd20a7dbf84d791ddee997c398ff"
+  dependencies:
+    can-log "^0.1.0"
+    can-util "^3.10.12"
+
+can-types@^1.1.0:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/can-types/-/can-types-1.1.4.tgz#4bd9eaa4c2ac8cc6d2d8a8afa3368b57761e42b0"
+  dependencies:
+    can-globals "^0.2.2"
+    can-log "^0.1.0"
+    can-namespace "1.0.0"
+    can-reflect "^1.0.0"
+    can-symbol "^1.0.0"
+
+can-util@^3.10.12, can-util@^3.10.6, can-util@^3.10.9, can-util@^3.9.0, can-util@^3.9.0-pre.4, can-util@^3.9.4, can-util@^3.9.5, can-util@^3.9.6:
+  version "3.10.15"
+  resolved "https://registry.yarnpkg.com/can-util/-/can-util-3.10.15.tgz#3ce86a81ee09e21a8ed0b971612276d40c8b3b82"
+  dependencies:
+    can-ajax "^1.0.0"
+    can-assign "^1.0.0"
+    can-cid "^1.1.0"
+    can-deparam "^1.0.0"
+    can-dom-data-state "^0.2.0"
+    can-event-dom-enter "^1.0.4"
+    can-event-dom-radiochange "^1.0.4"
+    can-globals "^0.2.2"
+    can-log "^0.1.0"
+    can-namespace "1.0.0"
+    can-param "^1.0.0"
+    can-parse-uri "^1.0.0"
+    can-reflect "^1.2.0"
+    can-symbol "^1.0.0"
+    can-types "^1.1.0"
+
+can-validate-interface@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/can-validate-interface/-/can-validate-interface-0.1.0.tgz#7aa5a123a9278bfb98a4f00352469301d97630c5"
+
+can-view-callbacks@^3.1.0, can-view-callbacks@^3.2.0:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/can-view-callbacks/-/can-view-callbacks-3.2.3.tgz#6dad02468ca91ae3a81c429908bee5be09968998"
+  dependencies:
+    can-namespace "1.0.0"
+    can-observation "^3.3.1"
+    can-util "^3.9.5"
+
+can-view-import@^3.1.0:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/can-view-import/-/can-view-import-3.2.5.tgz#4467529ffb1fdb56047784b49d6fd2d5f0cad2d2"
+  dependencies:
+    can-assign "^1.0.0"
+    can-dom-data-state "^0.2.0"
+    can-event "^3.6.0"
+    can-globals "^0.2.3"
+    can-log "^0.1.0"
+    can-stache "^3.7.3"
+    can-util "^3.9.5"
+    can-view-callbacks "^3.2.0"
+    can-view-nodelist "^3.1.0"
+
+can-view-live@^3.2.0:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/can-view-live/-/can-view-live-3.2.5.tgz#490fd8fe07f4f431ab074b31e44ecc8a6cc789aa"
+  dependencies:
+    can-compute "^3.3.1"
+    can-event "^3.6.0"
+    can-observation "^3.3.1"
+    can-reflect "^1.2.1"
+    can-types "^1.1.0"
+    can-util "^3.9.6"
+    can-view-callbacks "^3.2.0"
+    can-view-nodelist "^3.1.0"
+    can-view-parser "^3.4.0"
+    can-view-target "^3.1.0"
+
+can-view-model@^3.4.0:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/can-view-model/-/can-view-model-3.5.1.tgz#82abf1e755281144cce99e18e6f83c9f0affb44c"
+  dependencies:
+    can-globals "^0.2.3"
+    can-namespace "1.0.0"
+    can-reflect "^1.2.1"
+    can-simple-map "^3.3.0"
+    can-types "^1.1.0"
+    can-util "^3.9.5"
+
+can-view-nodelist@^3.1.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/can-view-nodelist/-/can-view-nodelist-3.1.1.tgz#528c8fc9c77bfabe070bd65fd48437ceee5d4ea5"
+  dependencies:
+    can-namespace "1.0.0"
+    can-util "^3.9.5"
+
+can-view-parser@^3.4.0, can-view-parser@^3.6.0:
+  version "3.6.3"
+  resolved "https://registry.yarnpkg.com/can-view-parser/-/can-view-parser-3.6.3.tgz#ab80a9e0ee1275dd5927b3a40f239f1cd2f3b9d4"
+  dependencies:
+    can-attribute-encoder "^0.3.1"
+    can-log "^0.1.0"
+    can-namespace "1.0.0"
+
+can-view-scope@^3.5.4:
+  version "3.5.5"
+  resolved "https://registry.yarnpkg.com/can-view-scope/-/can-view-scope-3.5.5.tgz#7c456bfd0ee9cd1d71187a2e7ce9a40f22c357cd"
+  dependencies:
+    can-cid "^1.0.3"
+    can-compute "^3.3.7"
+    can-construct "^3.2.0"
+    can-define-lazy-value "^1.0.0"
+    can-event "^3.5.0"
+    can-log "^0.1.0"
+    can-namespace "1.0.0"
+    can-observation "^3.3.1"
+    can-reflect "^1.2.1"
+    can-simple-map "^3.3.0"
+    can-stache-key "^0.1.0"
+    can-symbol "^1.0.0"
+    can-util "^3.9.5"
+
+can-view-target@^3.1.0:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/can-view-target/-/can-view-target-3.1.5.tgz#4d5358572822a623c003ef8958cbd7f8c6cae948"
+  dependencies:
+    can-globals "^0.2.2"
+    can-namespace "1.0.0"
+    can-util "^3.10.9"
+
 caniuse-api@^1.5.2:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/caniuse-api/-/caniuse-api-1.6.1.tgz#b534e7c734c4f81ec5fbe8aca2ad24354b962c6c"
@@ -1994,13 +2508,13 @@ de-indent@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
 
-debug@2.6.9, debug@^2.2.0, debug@^2.6.6, debug@^2.6.8:
+debug@2.6.9, debug@^2.2.0, debug@^2.6.6, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
     ms "2.0.0"
 
-debug@^3.0.1, debug@^3.1.0:
+debug@^3.0.0, debug@^3.0.1, debug@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
@@ -2713,6 +3227,38 @@ faye-websocket@~0.11.0:
   dependencies:
     websocket-driver ">=0.5.1"
 
+feathers-commons@^0.8.0, feathers-commons@^0.8.7:
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/feathers-commons/-/feathers-commons-0.8.7.tgz#11c6f25b537745a983e8d61552d7db8932d53782"
+
+feathers-errors@^2.9.2:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/feathers-errors/-/feathers-errors-2.9.2.tgz#96ca0e5fe50cc56f0eccc90ce3fa5e1f8840828d"
+  dependencies:
+    debug "^3.0.0"
+
+feathers-query-filters@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/feathers-query-filters/-/feathers-query-filters-2.1.2.tgz#cdb18224db5e19cc0140d528108e0908d5eb0654"
+  dependencies:
+    feathers-commons "^0.8.0"
+
+feathers-vuex@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/feathers-vuex/-/feathers-vuex-1.0.4.tgz#1dd5fd313b6b3410a7cac88adf11523515a2cff4"
+  dependencies:
+    can-fixture-socket "^0.7.1"
+    debug "^3.1.0"
+    feathers-commons "^0.8.7"
+    feathers-errors "^2.9.2"
+    feathers-query-filters "^2.1.2"
+    jwt-decode "^2.2.0"
+    lodash.clonedeep "^4.5.0"
+    lodash.isobject "^3.0.2"
+    lodash.merge "^4.6.0"
+    lodash.trim "^4.5.1"
+    serialize-error "^2.1.0"
+
 figures@^1.3.5:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/figures/-/figures-1.7.0.tgz#cbe1e3affcf1cd44b80cadfed28dc793a9701d2e"
@@ -2807,6 +3353,12 @@ flat-cache@^1.2.1:
 flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
+
+follow-redirects@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.2.5.tgz#ffd3e14cbdd5eaa72f61b6368c1f68516c2a26cc"
+  dependencies:
+    debug "^2.6.9"
 
 for-in@^1.0.1:
   version "1.0.2"
@@ -3757,6 +4309,10 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
+"jquery@2.x - 3.x":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
+
 js-base64@^2.1.9:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.3.2.tgz#a79a923666372b580f8e27f51845c6f7e8fbfbaf"
@@ -3856,7 +4412,7 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-jwt-decode@^2.1.0:
+jwt-decode@^2.1.0, jwt-decode@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-2.2.0.tgz#7d86bd56679f58ce6a84704a657dd392bba81a79"
 
@@ -3991,6 +4547,10 @@ lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
 
+lodash.clonedeep@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+
 lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
@@ -4001,6 +4561,10 @@ lodash.debounce@^3.0.1:
   dependencies:
     lodash._getnative "^3.0.0"
 
+lodash.isobject@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/lodash.isobject/-/lodash.isobject-3.0.2.tgz#3c8fb8d5b5bf4bf90ae06e14f2a530a4ed935e1d"
+
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -4008,6 +4572,10 @@ lodash.memoize@^4.1.2:
 lodash.memoize@~3.0.3:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-3.0.4.tgz#2dcbd2c287cbc0a55cc42328bd0c736150d53e3f"
+
+lodash.merge@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.0.tgz#69884ba144ac33fe699737a6086deffadd0f89c5"
 
 lodash.pad@^4.1.0:
   version "4.5.1"
@@ -4020,6 +4588,10 @@ lodash.padend@^4.1.0:
 lodash.padstart@^4.1.0:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/lodash.padstart/-/lodash.padstart-4.6.1.tgz#d2e3eebff0d9d39ad50f5cbd1b52a7bce6bb611b"
+
+lodash.trim@^4.5.1:
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/lodash.trim/-/lodash.trim-4.5.1.tgz#36425e7ee90be4aa5e27bcebb85b7d11ea47aa57"
 
 lodash.uniq@^4.5.0:
   version "4.5.0"
@@ -5891,6 +6463,10 @@ send@0.16.1:
     range-parser "~1.2.0"
     statuses "~1.3.1"
 
+serialize-error@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/serialize-error/-/serialize-error-2.1.0.tgz#50b679d5635cdf84667bdc8e59af4e5b81d5f60a"
+
 serve-index@^1.7.2:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/serve-index/-/serve-index-1.9.1.tgz#d3768d69b1e7d82e5ce050fff5b453bea12a9239"
@@ -6138,6 +6714,15 @@ stackframe@^1.0.3:
 statuses@~1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.3.1.tgz#faf51b9eb74aaef3b3acf4ad5f61abf24cb7b93e"
+
+steal-stache@^3.1.0:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/steal-stache/-/steal-stache-3.1.3.tgz#28e307f021fde00a66fa23d52882519c4c85414d"
+  dependencies:
+    can-stache "^3.10.0"
+    can-stache-bindings "^3.2.0"
+    can-view-import "^3.1.0"
+    jquery "2.x - 3.x"
 
 stream-browserify@^2.0.0, stream-browserify@^2.0.1:
   version "2.0.1"

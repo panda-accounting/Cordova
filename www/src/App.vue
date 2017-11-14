@@ -8,12 +8,12 @@
     >
       <div class='sidebar__header'>
         <template v-if="user">
-          <img class='sidebar__user-icon' src={`/api/avatar/${this.user.username}`} />
-          <span class='sidebar__username'>{{this.user.username}}</span>
+          <img class='sidebar__user-icon' :src="`/api/avatar/${this.user.email}`" />
+          <span class='sidebar__username'>{{this.user.email}}</span>
           <div class='sidebar__icons'>
           </div>
         </template>
-        <button class="sidebar__button">请注册/登录</button>
+        <button v-else class="sidebar__button">请注册/登录</button>
       </div>
 
 
@@ -52,17 +52,13 @@
 
 <script>
   export default {
+    name: 'Root',
     data: () => ({
       drawer: false
     }),
-    mounted () {
-      if (!this.user) {
-        this.$router.push('/login')
-      }
-    },
     computed: {
       user () {
-        return this.$store.state.user
+        return this.$store.getters['users/current']
       },
       title () {
         return this.$store.state.title

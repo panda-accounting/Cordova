@@ -1,6 +1,7 @@
 import 'babel-polyfill'
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import './mixin'
 import App from './App.vue'
 import Cordova from './Cordova.js'
 
@@ -16,12 +17,12 @@ const Toast = Vue.extend(ToastComponent)
 
 Vue.mixin({
   methods: {
-    $toast ({text}) {
+    $toast (option) {
       const toast = new Toast({
         store: this.$store,
         router: this.$router,
         propsData: {
-          text
+          option
         }
       }).$mount()
       this.$root.$el.appendChild(toast.$el)
@@ -34,7 +35,7 @@ export default new Vue({
   router,
   store,
   el: '#app',
-  render: h => h(App),
+  render: (h) => h(App),
   mounted () {
     Cordova.initialize()
   }
