@@ -1,7 +1,12 @@
 <template>
   <v-container fluid>
     <v-layout row wrap>
-      <img class="logo" src="dist/img/logo.png" alt="">
+      <v-flex xs12 style="text-align: center">
+        <img class="logo" src="dist/img/logo.png" alt="">
+      </v-flex>
+      <v-flex xs12>
+        <h3 style="text-align: center">熊猫记账</h3>
+      </v-flex>
       <v-flex xs12>
         <v-text-field
           label="用户名"
@@ -32,7 +37,7 @@
         </v-flex>
       </v-layout>
       <v-flex xs12>
-        <v-btn block outline @click="skip" color="primary">离线模式</v-btn>
+        <v-btn block outline @click="skip" color="primary" disabled>离线模式（即将上线）</v-btn>
       </v-flex>
     </v-layout>
   </v-container>
@@ -53,14 +58,24 @@ export default {
         await this.$store.dispatch('auth/authenticate', {strategy: 'local', email: this.username, password: this.password})
         this.$router.push('/password')
       } catch (e) {
-        this.$toast({text: e.msg || e})
+        if (e.code == 401) {
+          return this.$toast({text: '错误的密码与用户名组合'})
+        }
+        this.$toast({text: e.message || e })
       }
     },
     async register () {
-      await this.$store.dispatch('users/create', {email: this.username, password: this.password})
-      this.$toast({'text': '创建成功'})
-      await this.$store.dispatch('auth/authenticate', {strategy: 'local', email: this.username, password: this.password})
-      this.$router.push('/password')
+      try {
+        await this.$store.dispatch('users/create', {email: this.username, password: this.password})
+        this.$toast({'text': '创建账户成功'})
+        await this.$store.dispatch('auth/authenticate', {strategy: 'local', email: this.username, password: this.password})
+        this.$router.push('/password')
+      } catch (e) {
+        if (e.code == 500 && e.data && e.data.code == 11000) {
+          return this.$toast({'text': '用户名已存在'})
+        }
+        this.$toast({text: e.message || e})
+      }
     },
     skip () {
       this.$store.dispatch('skipRegister')
