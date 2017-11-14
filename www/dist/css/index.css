@@ -85,3 +85,8 @@
   position: relative;
   top: 40px;
 }
+
+.logo {
+  max-height: 100px;
+  margin: auto;
+}

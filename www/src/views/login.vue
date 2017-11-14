@@ -82,8 +82,5 @@ export default {
     padding-left: 5px;
   }
 }
-.logo {
-  max-height: 100px;
-  margin: auto;
-}
+
 </style>

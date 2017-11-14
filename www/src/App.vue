@@ -15,8 +15,6 @@
         </template>
         <button v-else class="sidebar__button">请注册/登录</button>
       </div>
-
-
       <v-list dense>
         <v-list-tile @click="$router.push(action.path)"  v-for="action in actions" :key="action.path">
           <v-list-tile-action>
@@ -50,7 +48,8 @@
       actions: [
         {icon: 'home', name: '仪表盘', path: '/dashboard'},
         {icon: 'folder_shared', name: '账户管理', path: '/accounts'},
-        {icon: 'build', name: '设置', path: '/settings'}
+        {icon: 'build', name: '设置', path: '/settings'},
+        {icon: 'person_outline', name: '关于', path: '/about'}
       ]
     }),
     computed: {

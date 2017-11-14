@@ -3,3 +3,10 @@
     <p class="grey--text">面包会有的</p>
   </v-container>
 </template>
+<script>
+export default {
+  mounted () {
+    this.$store.commit('changeTitle', '熊猫记账')
+  }
+}
+</script>
