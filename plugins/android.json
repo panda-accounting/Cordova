@@ -12,11 +12,10 @@
     },
     "cordova-plugin-advanced-http": {
       "PACKAGE_NAME": "com.laesporadelhongo.cordovue"
-    }
-  },
-  "dependent_plugins": {
+    },
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.laesporadelhongo.cordovue"
     }
-  }
+  },
+  "dependent_plugins": {}
 }

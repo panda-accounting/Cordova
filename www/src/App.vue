@@ -8,7 +8,7 @@
     >
       <div class='sidebar__header'>
         <template v-if="user">
-          <img class='sidebar__user-icon' src="/dist/img/logo.png" />
+          <img class='sidebar__user-icon' src="dist/img/logo.png" />
           <span class='sidebar__username'>{{this.user.email}}</span>
           <div class='sidebar__icons'>
           </div>

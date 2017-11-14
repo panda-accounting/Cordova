@@ -1,8 +1,8 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Cordovue",
-  "short_name": "Cordovue",
+  "name": "熊猫记账",
+  "short_name": "熊猫记账",
   "version": "com.laesporadelhongo.cordovue",
   "description": "A sample Apache Cordova application using VueJS.",
   "author": "Pandada8",

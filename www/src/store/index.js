@@ -10,7 +10,8 @@ import { get } from 'lodash'
 import accounts from './accounts'
 import records from './records'
 
-const remote = process.env.NODE_ENV !== 'production' ? 'http://localhost:3030' : 'http://api.accouting.pandada8.me'
+// const remote = process.env.NODE_ENV !== 'production' ? 'http://localhost:3030' : 'http://api.accouting.pandada8.me'
+const remote = 'https://api.accounting.pandada8.me'
 
 window.feathers = feathers
 const app = feathers()
